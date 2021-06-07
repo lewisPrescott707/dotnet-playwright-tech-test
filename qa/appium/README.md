@@ -22,8 +22,11 @@ We are going to push changes to the search infrastructure, the functionality sho
 ### Appium
 appium version (`1.21.0`)
 java version (`1.8.0_291`)
-maven version (`3.8.1`)
+maven version (`3.8.1`)    
+Run appium doctor (npm install -g appium-doctor)
 
+### Run Tests
+1. `cd wiki`
 1. Change DEVICE_NAME in test to be your device (`adb devices`)
 1. Start appium server
 1. `mvn clean`

@@ -49,6 +49,7 @@ public class AppTest {
       Assert.assertEquals(textViews.get(2).getText(), "home care");
     } catch (Exception E) {
       System.out.println( "Text not found " + E );
+      throw E;
     } 
     finally {
     }
