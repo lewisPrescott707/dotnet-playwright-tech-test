@@ -24,6 +24,11 @@ playwright install
 1. Add a negative scenario
 1. Refactor anything you would improve
 
+### Run
+1. Open `.proj` in Visual Studio
+1. Test Explorer > Run Test   
+_Note:_ videos are stored in `Playwright.Task/videos` folder
+
 ## Tips
 1. Make sure to comment and add details of your thought process and any assumptions you have made
 1. Don't spend too long on it (2 hours max)
