@@ -10,6 +10,8 @@ We are going to push changes to the search infrastructure, the functionality sho
 ## Task 2
 
 ### Setup
+dotnet version (`5.0.203`)   
+playwright version (`1.13.0`)
 1. Install Playwright CLI (Make sure you have [.Net 5.0](https://dotnet.microsoft.com/download/dotnet/5.0))
 ```PowerShell
 cd Playwright.Task
@@ -23,16 +25,8 @@ playwright install
 1. Refactor anything you would improve
 
 ## Tips
-1. Some carer branches cover multiple locations
 1. Make sure to comment and add details of your thought process and any assumptions you have made
 1. Don't spend too long on it (2 hours max)
-
-## Setup
-dotnet version (`5.0.203`)
-playwright version (`1.13.0`)
-
-1. `npm install`
-1. `npm test`
 
 ## On Completion
 - Fork and push your changes, then notify the hiring manager   
