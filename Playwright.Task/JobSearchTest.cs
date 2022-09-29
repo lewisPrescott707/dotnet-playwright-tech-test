@@ -26,6 +26,7 @@ namespace PlaywrightTests
                 RecordVideoDir = "../../../videos/"
             });
             Page = await BrowserContext.NewPageAsync();
+            Page.SetDefaultTimeout(3000);
         }
 
         [TearDown]
@@ -41,12 +42,12 @@ namespace PlaywrightTests
             await Page.GotoAsync("https://www.ceracare.co.uk/");
             await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
             
-            await Page.ClickAsync("[href='https://www.ceracare.co.uk/jobs/care/']");
-            await Page.FillAsync("id=searchLocation", "Manchester");
-            await Page.ClickAsync("[type='submit']");
+            await Page.ClickAsync("[href='/jobs']");
+            await Page.ClickAsync("[id='onetrust-accept-btn-handler']");
+            await Page.FillAsync(".location-search-input", "Trafford");
 
-            var listItem = await Page.QuerySelectorAsync(".jobs-list li");
-            var text = await listItem.TextContentAsync();
+            var listElement = Page.Locator("text=Manchester");
+            var text = await listElement.TextContentAsync();
 
             Assert.IsTrue(text.Equals("Manchester"));
         }
